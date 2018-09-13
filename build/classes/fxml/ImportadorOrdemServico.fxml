@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ancoraPainel" prefHeight="632.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.base.controller.ImportadorOrdemServicoCtr">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="67.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="372.0" text="IMPORTAÇÃO DE ORDEM DE SERVIÇOS :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtbusca" disable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="347.0" promptText="Insira Dados da Importação">
+                     <HBox.margin>
+                        <Insets right="10.0" top="15.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip autoHide="true" text="Somente Arquivos do Tipo Excel" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </TextField>
+                  <Button fx:id="btnImportar" mnemonicParsing="false" onAction="#BtnBusca" prefHeight="35.0" prefWidth="235.0" text="ABRIR ARQUIVO ">
+                     <HBox.margin>
+                        <Insets right="10.0" top="15.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/open.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip autoHide="true" text="Procurar Arquivo " wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="870.0" layoutY="25.0" mnemonicParsing="false" onAction="#ListarArquivo" prefHeight="35.0" prefWidth="350.0" text="IMPORTAR DADOS PARA A LISTA ">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/excel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Importar Para Lista " wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="71.0" prefWidth="1103.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="CENTER" layoutX="62.0" layoutY="10.0" minWidth="30.0" mnemonicParsing="false" onAction="#RemoverOrdem" prefHeight="40.0" prefWidth="268.0" text="REMOVER ORDEM DE SERVIÇO">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/listremove.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip autoHide="true" text="Remover Itens da Lista">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" minWidth="30.0" mnemonicParsing="false" onAction="#SalvarLista" prefHeight="40.0" prefWidth="316.0" text="SALVAR LISTA DE ORDEM DE SERVIÇO ">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/listasalve.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip autoHide="true" text="Salvar Lista  de Ordem de Servicos">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" minWidth="30.0" mnemonicParsing="false" onAction="#LimparLista" prefHeight="40.0" prefWidth="172.0" text="LIMPAR LISTA ">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/clearlist.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip autoHide="true" text="Limpar Lista" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children></HBox>
+         </bottom>
+         <center>
+            <TableView fx:id="tabela" prefHeight="534.0" prefWidth="1048.0" snapToPixel="false" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="getec" editable="false" maxWidth="221.0" minWidth="115.0" prefWidth="190.0" resizable="false" sortable="false" text="CODIGO GETEC" />
+                  <TableColumn fx:id="referencia" editable="false" maxWidth="223.0" minWidth="77.0" prefWidth="115.0" resizable="false" sortable="false" text="REFERENCIA" />
+                  <TableColumn fx:id="tipo" editable="false" maxWidth="221.0" minWidth="81.0" prefWidth="125.0" resizable="false" sortable="false" text="TIPO SERVIÇO" />
+                  <TableColumn fx:id="produto" editable="false" maxWidth="227.0" minWidth="62.0" prefWidth="87.0" resizable="false" sortable="false" text="PRODUTO" />
+                  <TableColumn fx:id="cidade" editable="false" maxWidth="556265.0" minWidth="72.0" prefWidth="140.0" resizable="false" sortable="false" text="CIDADE" />
+                  <TableColumn fx:id="Colestado" editable="false" maxWidth="227.0" minWidth="16.0" prefWidth="28.0" resizable="false" sortable="false" text="UF" />
+                  <TableColumn fx:id="datavencimento" editable="false" maxWidth="288.0" minWidth="83.0" prefWidth="123.0" resizable="false" sortable="false" text="DT VENCIMENTO" />
+                  <TableColumn fx:id="Colexpedidor" editable="false" maxWidth="257.0" minWidth="1.0" prefWidth="115.0" resizable="false" sortable="false" text="EXPEDIDOR" />
+                  <TableColumn fx:id="ColdataLancamento" editable="false" maxWidth="277.0" minWidth="80.0" prefWidth="136.0" resizable="false" sortable="false" text="DT LANÇAMENTO" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <left>
+            <VBox prefHeight="518.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <VBox prefHeight="528.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

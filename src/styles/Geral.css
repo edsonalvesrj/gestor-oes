@@ -1,0 +1,65 @@
+
+.menu-lateral {
+    -fx-background-color:  #eeeeee;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 0 1 0  0 ;
+}
+.menu-item:hover {
+    -fx-background-color: #e3e3e3;
+    
+    -fx-cursor: hand;
+}
+.root{
+    -fx-background-image: url("/Images/images_1.jpg");    
+    -fx-background-repeat: stretch;   
+     -fx-background-size: cover ;
+    -fx-background-position: center center;
+   
+   
+}
+#painelcourrier{
+    -fx-background-color: #5877a2;
+}
+#painelCancelar{
+    -fx-background-color:  brown;
+}
+#painelalterar{
+    -fx-background-color: darkorange;
+}
+
+#painelagendar{
+    
+     -fx-background-color: burlywood;
+}
+
+#painelfinalizar{
+    
+     -fx-background-color:  cornflowerblue;
+}
+#paineldevolver{
+    
+     -fx-background-color: darkolivegreen;
+}
+#tabelaall{
+     -fx-background-color:  aliceblue;
+    
+}
+#cbox{
+   -fx-font-weight: bold;
+   -fx-font-size:18px;
+   
+    
+}
+
+#btnSair{
+  
+    -fx-background-color: #e3e3e3;
+    
+}
+
+
+#topo{
+    
+    -fx-background-color: #eeeeee;
+    
+}

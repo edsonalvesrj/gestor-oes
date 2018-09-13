@@ -1,0 +1,66 @@
+
+.root{
+    -fx-background-image: url("/Images/back.jpg");    
+    -fx-background-repeat: stretch;   
+   -fx-background-size: 1400 710;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+   
+}
+.label{
+    -fx-font-size:19px;
+    -fx-font-wight: bold;
+    -fx-fill: #333333;
+    -fx-effect: dropshadow(gaussian,rgba(255,255,255,0.5),0,0,0,1);
+    
+}
+#welcome-text{
+    -fx-font-size:50px;
+    -fx-font-family:"Arial Black";
+    -fx-effect: innershadow(three-pass-box,rgba(0,0,0,0.7),6,0.0,0,2);     
+}
+#actiontarget{
+    
+    -fx-fill: FIREBRICK;
+    -fx-font-weight:bold;
+    -fx-effect: dropshadow(gaussian,rgba(255,255,255,0.5),0,0,0,1);
+}
+#buttontbl{
+    -fx-background-color: 
+        #a6b5c9,
+        linear-gradient(#303842 0%, #3e5577 20%, #375074 100%),
+        linear-gradient(#768aa5 0%, #849cbb 5%, #5877a2 50%, #486a9a 51%, #4a6c9b 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 7 30 7 30;
+    -fx-text-fill: #242d35;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+    
+}
+#tipomenu{
+    -fx-background-color:  #ccccff;
+    
+}
+.button{
+    -fx-text-fill: black;
+    -fx-font-family:"Arial Narrow";
+    -fx-background-color: #666666;
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.6),5,0.0,0,1);
+    -fx-font-size: 18;
+    -fx-pref-height: 40;
+    -fx-pref-width:100;
+    
+}
+.button:hover{
+    -fx-background-color: linear-gradient( #ccccff,#61a2b1);    
+}
+#rodape{
+    
+    -fx-background-color:  #cccccc;
+}
+#painel{
+    
+     -fx-background-color:   #375074;
+}

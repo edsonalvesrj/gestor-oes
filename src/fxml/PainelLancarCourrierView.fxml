@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="painelcourrier" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../styles/Geral.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.base.controller.LancarChamadoController">
+   <children>
+      <GridPane id="tabelaall" alignment="CENTER" gridLinesVisible="true" stylesheets="@../styles/Geral.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="46.0" minWidth="10.0" prefWidth="23.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1243.0" minWidth="10.0" prefWidth="1225.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="46.0" minWidth="10.0" prefWidth="23.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="717.0" minHeight="10.0" prefHeight="704.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="209.0" minHeight="20.0" prefHeight="14.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="81.0" prefWidth="1180.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="524.0" text="SELECIONE O COURRIER :">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Cliente.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox id="cbox" fx:id="comboCourrier" onAction="#AcaoNaComboBox" prefHeight="61.0" prefWidth="736.0" promptText="SELECIONE ..." stylesheets="@../styles/Geral.css">
+                           <HBox.margin>
+                              <Insets left="20.0" right="10.0" />
+                           </HBox.margin>
+                           <tooltip>
+                              <Tooltip text="Selecione o Courrier">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                        </ComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="40.0" prefHeight="81.0" prefWidth="1180.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="524.0" text="DIGITE O CODIGO DA ORDEM DE SERVIÇO :">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txtCodigoGetec" onAction="#BtnSalvar" prefHeight="71.0" prefWidth="736.0" promptText="Digite o Codigo de Barras">
+                           <HBox.margin>
+                              <Insets left="20.0" right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="Preencha Com Codigo da Ordem de Serviço" />
+                           </tooltip>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="117.0" prefHeight="48.0" prefWidth="1100.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#BtnSalvar" prefHeight="30.0" prefWidth="150.0" text="OK">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/listasalve.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="OK">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#BtnCancelar" prefHeight="33.0" prefWidth="150.0" text="CANCELAR ">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Cancelar">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="735.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="524.0" text="BUSCAR ORDEM DE SERVIÇO :">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/informacao.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txtBusca" onKeyReleased="#BtnPesquisa" prefHeight="30.0" prefWidth="600.0" promptText="Digite o Codigo da Ordem ..">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <tooltip>
+                              <Tooltip text="Digite Somente Codigo Getec ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#BtnPesquisa" prefHeight="32.0" prefWidth="163.0" text="PESQUISAR ">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Localizar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Pesquisar  Ordem de Serviço">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TableView fx:id="Tabela" editable="true" prefHeight="428.0" prefWidth="1180.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="colCourrier" editable="false" maxWidth="340.0" minWidth="0.0" prefWidth="163.0" sortable="false" text="MOTOQUEIRO " />
+                        <TableColumn fx:id="colGetec" editable="false" maxWidth="436.0" minWidth="0.0" prefWidth="210.0" sortable="false" text="GETEC" />
+                        <TableColumn fx:id="colDataEntrada" editable="false" maxWidth="329.0" minWidth="0.0" prefWidth="163.0" sortable="false" text="DATA DE EXPEDIÇÃO " />
+                        <TableColumn fx:id="colStatus" editable="false" maxWidth="458.0" minWidth="0.0" prefWidth="188.0" sortable="false" text="STATUS FINAL " />
+                        <TableColumn fx:id="colDataVencimento" editable="false" maxWidth="458.0" minWidth="0.0" prefWidth="221.0" sortable="false" text="DATA VENCIMENTO " />
+                        <TableColumn fx:id="colFuncionario" editable="false" maxWidth="458.0" minWidth="0.0" prefWidth="234.0" sortable="false" text="EXPEDIDOR LANÇADOR" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label alignment="CENTER" prefHeight="20.0" prefWidth="250.0" text="TOTAL DE ORDEM DE SERVIÇOS">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelTotalTable" alignment="CENTER" layoutX="975.0" layoutY="10.0" prefHeight="20.0" prefWidth="102.0">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

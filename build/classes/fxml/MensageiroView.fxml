@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="814.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.base.controller.MensageiroViewCtr">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox id="rodape" disable="true" prefHeight="33.0" prefWidth="813.0" stylesheets="@../styles/estilo.css">
+               <children>
+                  <Label text="MENSAGEIROS ">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></Label>
+                  <Label fx:id="labelCodigo" layoutX="20.0" layoutY="10.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="375.0" prefWidth="813.0">
+               <children>
+                  <GridPane alignment="CENTER" gridLinesVisible="true" minHeight="310.0" minWidth="280.0" prefHeight="329.0" prefWidth="794.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.0" minWidth="10.0" prefWidth="97.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="728.0" minWidth="10.0" prefWidth="697.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="78.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="79.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="96.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="109.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="155.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="87.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="87.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="159.0" text="NOME :" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="155.0" text="CPF :" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="155.0" text="RG :" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="159.0" text="TELEFONE :" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="158.0" text="ENDEREÇO :" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="159.0" text="CIDADE :" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="111.0" text="STATUS  :" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <TextField fx:id="txtNome" onKeyReleased="#MascaraCampos" prefHeight="32.0" prefWidth="697.0" promptText="Preencha com o nome do Funcionário , Usuario etc ...">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <TextField fx:id="txtCpf" onKeyReleased="#MascaraCampos" prefHeight="32.0" prefWidth="259.0" promptText="Preencha com o numero do Cpf ">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Somente Numeros " />
+                                 </tooltip>
+                              </TextField>
+                              <Label alignment="CENTER" prefHeight="33.0" prefWidth="180.0" text="DATA NASCIMENTO :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="dtNascimento" onKeyReleased="#MascaraCampos" prefHeight="32.0" prefWidth="244.0" promptText="Preencha com a data de Nascimento">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <TextField fx:id="txtRg" onKeyReleased="#MascaraCampos" prefHeight="32.0" prefWidth="259.0" promptText="Preencha com o numero do Rg">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Somente Numeros ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </TextField>
+                              <Label alignment="CENTER" prefHeight="33.0" prefWidth="180.0" text="ORGÃO EMISSOR :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtOrgao" onKeyReleased="#MascaraCampos" prefHeight="32.0" prefWidth="244.0" promptText="Preencha com o numero do Orgão emissor">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <TextField fx:id="txtTelefone" onKeyReleased="#MascaraCampos" prefHeight="32.0" prefWidth="259.0" promptText="Telefone Fixo">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Somente Numeros ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </TextField>
+                              <Label alignment="CENTER" prefHeight="33.0" prefWidth="180.0" text="CELULAR :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtCelular" onKeyReleased="#MascaraCampos" prefHeight="32.0" prefWidth="244.0" promptText="Telefone Celular">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Somente Numeros ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <TextField fx:id="txtEndereco" onKeyReleased="#MascaraCampos" prefHeight="32.0" prefWidth="697.0" promptText="Preencha com Endereço residencial   rua ,quadra lote , bairro  etc ...">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <TextField fx:id="txtCidade" onKeyReleased="#MascaraCampos" prefHeight="32.0" prefWidth="259.0" promptText="Cidade ">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label alignment="CENTER" prefHeight="33.0" prefWidth="180.0" text="ESTADO :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="cbEstado" prefHeight="32.0" prefWidth="244.0" promptText="UF">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="169.0" layoutY="50.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <ComboBox fx:id="cbStatus" prefHeight="32.0" prefWidth="244.0" promptText="ATIVIDADE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <children>
+                              <Button layoutX="40.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#BtnSalvar" prefHeight="40.0" prefWidth="110.0" text="SALVAR" textOverrun="CENTER_ELLIPSIS">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/Finalizar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="Salvar Dados do Funcionário">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onMouseClicked="#BtnExcluir" prefHeight="40.0" prefWidth="110.0" text="EXCLUIR" textOverrun="CENTER_ELLIPSIS">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/Excluir.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Excluir Funcionário">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onMouseClicked="#BtnLimpar" prefHeight="40.0" prefWidth="110.0" text="LIMPAR" textOverrun="CENTER_ELLIPSIS">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/sair.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Limpar Fomulário">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="208.0" prefWidth="794.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="794.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="275.0" text="BUSCAR MENSAGEIRO :">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Cliente.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtBusca" onKeyReleased="#BtnPesquisa" prefHeight="30.0" prefWidth="504.0" promptText="Digite o nome ..">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <tooltip>
+                              <Tooltip text="Digite Somente Nomes ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Tooltip>
+                           </tooltip>
+                        </TextField>
+                        <Button mnemonicParsing="false" onMouseClicked="#BtnPesquisa" prefHeight="32.0" prefWidth="193.0" text="PESQUISAR">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Localizar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Pesquisar  Dados do Courrier">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Tooltip>
+                           </tooltip>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="Tabela" editable="true" onMouseClicked="#AcaoNaGrid" prefHeight="181.0" prefWidth="784.0" tableMenuButtonVisible="true">
+                    <columns>
+                      <TableColumn fx:id="colCodigo" editable="false" prefWidth="51.0" resizable="false" sortable="false" text="CODIGO" />
+                      <TableColumn fx:id="colNome" editable="false" prefWidth="188.0" resizable="false" sortable="false" text="NOME" />
+                        <TableColumn fx:id="colCpf" editable="false" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" resizable="false" sortable="false" text="CPF" />
+                        <TableColumn fx:id="colRg" editable="false" maxWidth="120.0" minWidth="90.0" prefWidth="90.0" resizable="false" sortable="false" text="RG" />
+                        <TableColumn fx:id="colTelefone" editable="false" maxWidth="125.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="TELEFONE" />
+                        <TableColumn fx:id="colDataNascimento" editable="false" maxWidth="125.0" minWidth="100.0" prefWidth="125.0" resizable="false" sortable="false" text="DATA NASCIMENTO" />
+                        <TableColumn fx:id="colStatus" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="STATUS" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

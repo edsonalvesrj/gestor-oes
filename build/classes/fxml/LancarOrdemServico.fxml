@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="632.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.base.controller.LancarOrdemServicoCtr">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox id="rodape" prefHeight="33.0" prefWidth="813.0" stylesheets="@../styles/estilo.css">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="307.0" text="LANÇAR ORDEM DE SERVIÇOS :">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="225.0" prefWidth="813.0">
+               <children>
+                  <GridPane alignment="CENTER" gridLinesVisible="true" minHeight="205.0" minWidth="280.0" prefHeight="205.0" prefWidth="794.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.0" minWidth="10.0" prefWidth="158.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="845.0" minWidth="10.0" prefWidth="616.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="37.0" prefWidth="177.0" text="PRODUTO :" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="37.0" prefWidth="177.0" text="CIDADE :" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="37.0" prefWidth="177.0" text="DATA NASCIMENTO :" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="37.0" prefWidth="177.0" text="CODIGO GETEC :" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelCodigo" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="177.0" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <ComboBox fx:id="cbProduto" prefHeight="32.0" prefWidth="250.0" promptText="SELECIONE ...">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Label alignment="CENTER" prefHeight="33.0" prefWidth="200.0" text="TIPO DE SERVIÇO :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="cbTipo" prefHeight="32.0" prefWidth="250.0" promptText="Selecione ..">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <ComboBox fx:id="cbCidade" prefHeight="32.0" prefWidth="250.0" promptText="SELECIONE  ...">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Label alignment="CENTER" prefHeight="33.0" prefWidth="200.0" text="ESTADO :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="cbEstado" prefHeight="32.0" prefWidth="250.0" promptText="Selecione ...">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <DatePicker fx:id="dtVencimento" onInputMethodTextChanged="#MascaraCampos" onKeyPressed="#MascaraCampos" onKeyReleased="#MascaraCampos" onKeyTyped="#MascaraCampos" prefHeight="32.0" prefWidth="250.0" promptText="Preencha  Data de Vencimento">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                              <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="CODIGO REFERENCIA :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtCodReferencia" onInputMethodTextChanged="#MascaraCampos" onKeyPressed="#MascaraCampos" onKeyReleased="#MascaraCampos" onKeyTyped="#MascaraCampos" prefHeight="32.0" prefWidth="250.0" promptText=" Codigo da Referencia">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <TextField fx:id="txtCodGetec" onAction="#BtnSalvar" onInputMethodTextChanged="#MascaraCampos" onKeyPressed="#MascaraCampos" onKeyReleased="#MascaraCampos" onKeyTyped="#MascaraCampos" prefHeight="32.0" prefWidth="800.0" promptText="Preencha com o Codigo do Getec">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <CheckBox fx:id="checkReativar" mnemonicParsing="false" text="Reativar Ordem de Serviço" visible="false">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="200.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                              <Button layoutX="40.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#BtnSalvar" prefHeight="40.0" prefWidth="110.0" text="SALVAR " textOverrun="CENTER_ELLIPSIS">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/Finalizar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="Salvar  Funcionário">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onMouseClicked="#BtnExcluir" prefHeight="40.0" prefWidth="110.0" text="EXCLUIR " textOverrun="CENTER_ELLIPSIS">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/Excluir.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Excluir Funcionário">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onMouseClicked="#BtnLimpar" prefHeight="40.0" prefWidth="110.0" text="LIMPAR " textOverrun="CENTER_ELLIPSIS">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/sair.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Editar  Funcionário">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="364.0" prefWidth="814.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="735.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="241.0" text="BUSCAR ORDEM DE SERVIÇO :">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/informacao.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtBusca" onKeyReleased="#BtnPesquisa" prefHeight="30.0" prefWidth="642.0" promptText="Digite o Codigo da Ordem ..">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <tooltip>
+                              <Tooltip text="Digite Somente Codigo Getec ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" onMouseClicked="#BtnPesquisa" prefHeight="32.0" prefWidth="163.0" text="PESQUISAR ">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Localizar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Pesquisar  Ordem de Serviço">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="Tabela" onMouseClicked="#AcaoNaGrid" prefHeight="322.0" prefWidth="814.0" snapToPixel="false" tableMenuButtonVisible="true">
+                    <columns>
+                      <TableColumn fx:id="Colgetec" editable="false" maxWidth="218.0" minWidth="84.0" prefWidth="121.00001525878906" resizable="false" sortable="false" text=" GETEC" />
+                        <TableColumn fx:id="Colreferencia" editable="false" maxWidth="223.0" minWidth="63.0" prefWidth="81.0" resizable="false" sortable="false" text=" REFERENCIA" />
+                        <TableColumn fx:id="Coltipo" editable="false" maxWidth="205.0" minWidth="81.0" prefWidth="141.0" resizable="false" sortable="false" text="TIPO SERVIÇO" />
+                        <TableColumn fx:id="Colproduto" editable="false" maxWidth="227.0" minWidth="60.0" prefWidth="63.0" resizable="false" sortable="false" text="PRODUTO" />
+                        <TableColumn fx:id="Colcidade" editable="false" maxWidth="268.0" minWidth="72.0" prefWidth="146.0" resizable="false" sortable="false" text="CIDADE" />
+                        <TableColumn fx:id="Colestado" editable="false" maxWidth="227.0" minWidth="22.0" prefWidth="24.0" resizable="false" sortable="false" text="UF" />
+                        <TableColumn fx:id="Coldatavencimento" editable="false" maxWidth="315.0" minWidth="83.0" prefWidth="107.0" resizable="false" sortable="false" text="DT VENCIMENTO" />
+                        <TableColumn fx:id="Colstatus" editable="false" maxWidth="257.0" minWidth="80.0" prefWidth="192.0" resizable="false" sortable="false" text="STATUS FINAL" />
+                        <TableColumn fx:id="ColExpedidor" editable="false" maxWidth="257.0" minWidth="0.0" prefWidth="89.0" resizable="false" sortable="false" text="EXPEDIDOR CRIADOR" />
+                        <TableColumn fx:id="ColData" editable="false" maxWidth="272.0" minWidth="78.0" prefWidth="115.0" resizable="false" sortable="false" text="DT LANÇAMENTO" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="250.0" text="TOTAL DE ORDEM DE SERVIÇOS">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelTotalTable" alignment="CENTER" layoutX="975.0" layoutY="10.0" prefHeight="20.0" prefWidth="102.0">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

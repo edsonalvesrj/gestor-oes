@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../styles/Geral.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.base.controller.PrincipalController">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="400.0" prefWidth="594.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Accordion fx:id="tab_Funcao" styleClass="menu-lateral" BorderPane.alignment="TOP_RIGHT">
+              <panes>
+                  <TitledPane fx:id="painelServico" animated="false" layoutX="10.0" layoutY="10.0" prefHeight="469.0" prefWidth="242.0">
+                     <content>
+                        <AnchorPane prefHeight="326.0" prefWidth="298.0">
+                           <children>
+                              <VBox layoutX="28.6" layoutY="29.6" prefHeight="183.0" prefWidth="259.0" styleClass="menu-lateral" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                 <children>
+                                    <HBox minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#BtnImportaServico" prefHeight="37.0" prefWidth="240.0" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Editar.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Importar Ordem de Serviço ao Sistema" wrapText="true">
+                                             <tooltip>
+                                                <Tooltip text="Importar Ordem de Serviço ao Sistema ">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip></Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox onMouseClicked="#BtnInserirServico" prefHeight="37.0" prefWidth="233.0" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Editar.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="201.0" text="Inserir Ordem de Serviço ao Sistema" wrapText="true">
+                                             <tooltip>
+                                                <Tooltip text="Inserir Ordem de Serviço ao Sistema ">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip></Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox onMouseClicked="#BtnLancarCourrier" prefHeight="37.0" prefWidth="199.0" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Editar.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="227.0" text="Lançar  Ordem de Serviço ao  Courrier" wrapText="true">
+                                             <tooltip>
+                                                <Tooltip text="Lançar Ordem de Serviço ao mensageiro ">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font></Tooltip>
+                                             </tooltip></Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="47.0" onMouseClicked="#BtnTabFinalizarOrdem" prefHeight="37.0" prefWidth="226.0" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Editar.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="160.0" text="Baixar Chamado">
+                                             <tooltip>
+                                                <Tooltip text="Finalizar Ordem de Serviço OK!">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip></Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox onMouseClicked="#BtnTabConsultarOrdem" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Localizar.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Consultar Ordem de Serviço " />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <HBox prefHeight="39.0" prefWidth="266.0" spacing="5.0" styleClass="menu-item">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Compra.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Serviços">
+                                 <tooltip>
+                                    <Tooltip text="Serviços">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                  </TitledPane>
+                  <TitledPane fx:id="painelRelatorio" animated="false" layoutX="10.0" layoutY="10.0" prefHeight="220.0" prefWidth="159.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="399.0" prefWidth="271.0">
+                           <children>
+                              <VBox layoutX="19.6" layoutY="18.6" prefHeight="380.0" prefWidth="229.0" styleClass="menu-lateral" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <HBox onMouseClicked="#btnRelatorio" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/relatorio.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="209.0" text="Todos Chamados Por Periodo" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/relatorio.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="209.0" text="Chamados Executados " />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/relatorio.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="213.0" text="Chamados Cancelados" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/relatorio.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="220.0" text="Chamados Agendados " />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/relatorio.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="212.0" text="Por Courrier" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <HBox prefHeight="39.0" prefWidth="257.0" spacing="5.0" styleClass="menu-item">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/relatorio.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="17.0" prefWidth="74.0" text="Relatorios">
+                                 <tooltip>
+                                    <Tooltip text="Relatorios">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                  </TitledPane>
+                <TitledPane fx:id="painelAdm" animated="false" prefHeight="421.0" prefWidth="226.0" styleClass="menu-lateral">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="141.0" prefWidth="121.0">
+                           <children>
+                              <VBox layoutX="19.6" layoutY="18.6" prefHeight="380.0" prefWidth="211.0" styleClass="menu-lateral" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <HBox onMouseClicked="#BtnLoadFuncionarioView" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Fornecedor.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Funcionario Administrativo">
+                                             <tooltip>
+                                                <Tooltip text="Funcionarios">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip></Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox onMouseClicked="#BtnLoadMensageiroView" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Cliente.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Mensageiros ">
+                                             <tooltip>
+                                                <Tooltip text="Mensageiros">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox onMouseClicked="#BtnLoadServicoView" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Compra.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Tipos de Serviços">
+                                             <tooltip>
+                                                <Tooltip text="Tips de Serviços">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip></Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox onMouseClicked="#BtnLoadProdutoView" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Produto.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Produtos">
+                                             <tooltip>
+                                                <Tooltip text="Produtos">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip></Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="158.0" onMouseClicked="#BtnLoadRotasView" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/rotas.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Rotas">
+                                             <tooltip>
+                                                <Tooltip text="Rotas">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip></Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="158.0" onMouseClicked="#BtnLoadMotivosView" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/informacao.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Cadastros de Observações">
+                                             <tooltip>
+                                                <Tooltip text="Observações">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <graphic>
+                        <HBox prefHeight="39.0" prefWidth="257.0" spacing="5.0" styleClass="menu-item">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/cog.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Administrativo">
+                                 <tooltip>
+                                    <Tooltip text="Adminstração de Cadastros ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                </TitledPane>
+                  <TitledPane fx:id="painelSobre" animated="false" layoutX="10.0" layoutY="10.0" prefHeight="220.0" prefWidth="159.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="29.6" layoutY="27.6" prefHeight="361.0" prefWidth="273.0" styleClass="menu-lateral" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <HBox onMouseClicked="#BtnPrestadorServicoView" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/info.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="141.0" text="Prestadores De Serviços">
+                                             <tooltip>
+                                                <Tooltip text="Prestadores de serviços">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip></Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" onMouseClicked="#BtnLoadEmpresaView" spacing="5.0" styleClass="menu-item">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/info.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="64.0" text="Empresa">
+                                             <tooltip>
+                                                <Tooltip text="Sobre Empresa">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <HBox prefHeight="39.0" prefWidth="259.0" spacing="5.0" styleClass="menu-item">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/informacao.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Sobre">
+                                 <tooltip>
+                                    <Tooltip text="Sobre Empresa">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Tooltip>
+                                 </tooltip>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                  </TitledPane>
+                  <TitledPane fx:id="painelConsulta" animated="false" prefHeight="338.0" prefWidth="273.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="423.0" prefWidth="220.0">
+                           <children>
+                              <ListView fx:id="listViewAcordion_id" layoutX="29.6" layoutY="27.6" prefHeight="361.0" prefWidth="277.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <VBox prefHeight="64.0" prefWidth="266.0">
+                           <children>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="233.0" spacing="5.0" styleClass="menu-item">
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" />
+                                 </padding>
+                                 <children>
+                                    <TextField fx:id="txt_BuscaChamado_Acordion_id" onAction="#BtnConsultaChamado" prefHeight="25.0" prefWidth="245.0">
+                                       <tooltip>
+                                          <Tooltip text="Pesquise Uma Ordem de Seviço Atraves do Codigo!">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font></Tooltip>
+                                       </tooltip>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin></TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="221.0" spacing="5.0" styleClass="menu-item">
+                                 <children>
+                                    <ImageView fitHeight="31.0" fitWidth="16.0" onMouseClicked="#BtnConsultaChamado" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/Localizar.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label onMouseClicked="#BtnConsultaChamado" prefHeight="19.0" prefWidth="202.0" text="Consulta Ordem de Serviço">
+                                       <tooltip>
+                                          <Tooltip text="Consulta rapida">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Tooltip>
+                                       </tooltip>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font></Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </TitledPane>
+                  <TitledPane accessibleRole="MENU" alignment="CENTER" animated="false" layoutX="10.0" layoutY="235.0" mouseTransparent="true" prefHeight="338.0" prefWidth="273.0">
+                     <graphic>
+                        <HBox prefHeight="45.0" prefWidth="225.0">
+                           <children>
+                              <Label fx:id="labelHora" alignment="CENTER" prefHeight="45.0" prefWidth="235.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+         </left>
+         <center>
+            <TabPane fx:id="TabPane" prefHeight="744.0" prefWidth="1034.0" stylesheets="@../styles/Geral.css" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin></TabPane>
+         </center>
+         <right>
+            <VBox prefHeight="753.0" prefWidth="10.0" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <VBox prefHeight="10.0" prefWidth="1280.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <HBox fx:id="hboxFachada" prefHeight="45.0" prefWidth="1280.0" styleClass="menu-lateral" stylesheets="@../styles/Geral.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="46.0" prefWidth="279.0">
+                     <children>
+                        <AnchorPane prefHeight="46.0" prefWidth="278.0">
+                           <children>
+                              <Label fx:id="labelEsconderMenu" accessibleRole="BUTTON" alignment="CENTER" layoutX="-1.0" minWidth="277.0" onMouseClicked="#BtnEsconderMenu" prefHeight="46.0" prefWidth="277.0" styleClass="menu-item" text="Esconder Menu" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                                 <tooltip>
+                                    <Tooltip text="Esconder Menu">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/clearlist.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelMostrarMenu" accessibleRole="BUTTON" alignment="CENTER" layoutX="10.0" layoutY="10.0" minWidth="270.0" onMouseClicked="#BtnMostrarMenu" prefHeight="46.0" prefWidth="270.0" styleClass="menu-item" text="Mostrar Menu" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                                 <tooltip>
+                                    <Tooltip text="Mostrar Menu">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/clearlist.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="993.0">
+                     <children>
+                        <AnchorPane prefHeight="45.0" prefWidth="788.0">
+                           <children>
+                              <Label fx:id="labelUsuarioLogin" prefHeight="42.0" prefWidth="424.0" textFill="#6f979e" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="200.0" />
+                                 </padding>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/person.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                              <HBox alignment="CENTER_RIGHT" layoutX="203.0" prefHeight="45.0" prefWidth="572.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="55.0" prefWidth="194.0">
+                     <children>
+                        <AnchorPane prefHeight="46.0" prefWidth="175.0">
+                           <children>
+                              <Label fx:id="labelSair" accessibleRole="BUTTON" alignment="CENTER" layoutX="10.0" layoutY="10.0" minWidth="169.0" onMouseClicked="#BtnSair" prefHeight="37.0" prefWidth="169.0" styleClass="menu-item" text="Sair  do  Sistema" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                                 <tooltip>
+                                    <Tooltip text="Clique para  Sair do Sistema ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/sair.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" right="10.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
